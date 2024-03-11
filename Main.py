@@ -2,8 +2,8 @@ import pyfiles
 import sys
 import numpy as np
 
-#import unreal_stylesheetpip 
-import qdarktheme
+#import unreal_stylesheetpip
+import qdarkstyle
 
 import pyqtgraph as pg
 
@@ -524,8 +524,10 @@ class MainWindow(QDialog):
 
 
 if __name__ == '__main__':
+    print("PL")
     app = QApplication(sys.argv)
-    app.setStyleSheet(qdarktheme.load_stylesheet("dark"))
+    app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyside6', theme='dark'))
+
 
     window = MainWindow()
     sys.exit(window.exec())
